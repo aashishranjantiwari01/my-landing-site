@@ -380,7 +380,7 @@
             justify-content: center;
             flex-wrap: wrap;
             animation: fadeUp 0.7s ease 0.3s both;
-        }
+        } 
 
         .trust-row {
             margin-top: 50px;
@@ -440,7 +440,7 @@
 
         .ticker-track {
             display: flex;
-            animation: ticker 25s linear infinite;
+            animation: ticker 15s linear infinite;
             white-space: nowrap;
         }
 
@@ -1276,10 +1276,11 @@
         }
 
         .footer-brand p {
-            font-size: 0.875rem;
-            color: var(--text-dim);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
             line-height: 1.75;
-            max-width: 280px;
+            max-width: 320px;
             margin: 14px 0 26px;
         }
 
@@ -2677,9 +2678,10 @@
             position: absolute;
             pointer-events: none;
             z-index: 0;
-            opacity: 0.7;
-            filter: drop-shadow(0 0 20px rgba(225, 29, 29, 0.15));
-            animation: mascotFloat 4s ease-in-out infinite;
+            opacity: 0.18;
+            filter: drop-shadow(0 0 12px rgba(225, 29, 29, 0.08));
+            animation: mascotFloat 6s ease-in-out infinite;
+            will-change: transform;
         }
 
         .float-mascot img {
@@ -2692,11 +2694,11 @@
 
             0%,
             100% {
-                transform: translateY(-12px);
+                transform: translateY(-8px);
             }
 
             50% {
-                transform: translateY(12px);
+                transform: translateY(8px);
             }
         }
 
@@ -2704,11 +2706,23 @@
 
             0%,
             100% {
-                transform: translateY(-15px);
+                transform: translateY(-10px);
             }
 
             50% {
-                transform: translateY(15px);
+                transform: translateY(10px);
+            }
+        }
+
+        @keyframes mascotFloat3 {
+
+            0%,
+            100% {
+                transform: translateY(-7px);
+            }
+
+            50% {
+                transform: translateY(7px);
             }
         }
 
@@ -2718,8 +2732,8 @@
             width: auto;
             top: 20%;
             left: 5%;
-            opacity: 0.6;
-            animation: mascotFloat 5s ease-in-out infinite;
+            opacity: 0.15;
+            animation: mascotFloat 7s ease-in-out infinite;
         }
 
         .hero-mascot-right {
@@ -2727,38 +2741,38 @@
             width: auto;
             top: 20%;
             right: 3%;
-            opacity: 0.7;
-            animation: mascotFloat 4s ease-in-out infinite;
+            opacity: 0.18;
+            animation: mascotFloat2 6s ease-in-out infinite;
         }
 
         /* Services mascot */
         .services-mascot {
-            height: 90px;
+            height: 100px;
             width: auto;
-            top: -5%;
-            right: -80px;
-            opacity: 0.7;
-            animation: mascotFloat2 5s ease-in-out infinite;
+            top: 20px;
+            right: 10px;
+            opacity: 0.2;
+            animation: mascotFloat2 7s ease-in-out infinite;
         }
 
         /* Features mascot */
         .features-mascot {
-            height: 90px;
+            height: 95px;
             width: auto;
-            bottom: 10%;
-            left: -80px;
-            opacity: 0.7;
-            animation: mascotFloat 5s ease-in-out infinite;
+            bottom: 12%;
+            left: 10px;
+            opacity: 0.2;
+            animation: mascotFloat3 7s ease-in-out infinite;
         }
 
         /* Testimonials mascot */
         .testimonials-mascot {
-            height: 80px;
+            height: 85px;
             width: auto;
-            top: 5%;
-            right: -60px;
-            opacity: 0.7;
-            animation: mascotFloat2 4s ease-in-out infinite;
+            top: 15px;
+            right: 10px;
+            opacity: 0.2;
+            animation: mascotFloat2 6s ease-in-out infinite;
         }
 
         /* CTA mascots */
@@ -2766,24 +2780,125 @@
             height: 90px;
             width: auto;
             top: 10%;
-            left: -60px;
-            opacity: 0.65;
-            animation: mascotFloat 5s ease-in-out infinite;
+            left: 10px;
+            opacity: 0.18;
+            animation: mascotFloat 7s ease-in-out infinite;
         }
 
         .cta-mascot-right {
             height: 75px;
             width: auto;
             bottom: 10%;
-            right: -50px;
-            opacity: 0.6;
-            animation: mascotFloat2 4.5s ease-in-out infinite;
+            right: 10px;
+            opacity: 0.15;
+            animation: mascotFloat2 6.5s ease-in-out infinite;
         }
 
-        /* Responsive */
-        @media(max-width: 1024px) {
+        /* ========== MASCOT RESPONSIVE — TABLET ========== */
+        @media (max-width: 1024px) {
             .float-mascot {
-                display: none;
+                opacity: 0.14;
+            }
+
+            .services-mascot {
+                height: 70px;
+                top: 10px;
+                right: 5px;
+            }
+
+            .features-mascot {
+                height: 65px;
+                left: 5px;
+            }
+
+            .testimonials-mascot {
+                height: 60px;
+                top: 10px;
+                right: 5px;
+            }
+
+            .cta-mascot-left,
+            .cta-mascot-right {
+                height: 60px;
+            }
+
+            .hero-mascot-left,
+            .hero-mascot-right {
+                height: 80px;
+            }
+        }
+
+        /* ========== MASCOT RESPONSIVE — MOBILE ========== */
+        @media (max-width: 768px) {
+            .float-mascot {
+                opacity: 0.1;
+            }
+
+            .services-mascot {
+                height: 50px;
+                top: 5px;
+                right: 0;
+            }
+
+            .features-mascot {
+                height: 45px;
+                bottom: 5%;
+                left: 0;
+            }
+
+            .testimonials-mascot {
+                height: 40px;
+                top: 5px;
+                right: 0;
+            }
+
+            .hero-mascot-left {
+                height: 50px;
+                top: 12%;
+                left: 2%;
+            }
+
+            .hero-mascot-right {
+                height: 55px;
+                top: 15%;
+                right: 1%;
+            }
+
+            .cta-mascot-left,
+            .cta-mascot-right {
+                height: 40px;
+            }
+        }
+
+        /* ========== MASCOT RESPONSIVE — SMALL PHONE ========== */
+        @media (max-width: 480px) {
+            .float-mascot {
+                opacity: 0.08;
+            }
+
+            .services-mascot {
+                height: 38px;
+            }
+
+            .features-mascot {
+                height: 35px;
+            }
+
+            .testimonials-mascot {
+                height: 32px;
+            }
+
+            .hero-mascot-left {
+                height: 35px;
+            }
+
+            .hero-mascot-right {
+                height: 38px;
+            }
+
+            .cta-mascot-left,
+            .cta-mascot-right {
+                height: 30px;
             }
         }
     </style>
@@ -2855,22 +2970,26 @@
     <!-- TICKER -->
     <div class="ticker-wrap">
         <div class="ticker-track">
-            <span class="ticker-item">1.2M+ Orders Delivered</span>
-            <span class="ticker-item">Instagram Followers from $0.89</span>
-            <span class="ticker-item">Facebook Page Likes from $0.50</span>
-            <span class="ticker-item">Twitter Followers from $0.60</span>
-            <span class="ticker-item">Telegram Members from $0.40</span>
-            <span class="ticker-item">OnlyFans Subscribers Available</span>
-            <span class="ticker-item">API for Resellers</span>
-            <span class="ticker-item">99.9% Uptime Guaranteed</span>
-            <span class="ticker-item">1.2M+ Orders Delivered</span>
-            <span class="ticker-item">Instagram Followers from $0.89</span>
-            <span class="ticker-item">Facebook Page Likes from $0.50</span>
-            <span class="ticker-item">Twitter Followers from $0.60</span>
-            <span class="ticker-item">Telegram Members from $0.40</span>
-            <span class="ticker-item">OnlyFans Subscribers Available</span>
-            <span class="ticker-item">API for Resellers</span>
-            <span class="ticker-item">99.9% Uptime Guaranteed</span>
+            <span class="ticker-item">Instagram</span>
+            <span class="ticker-item">Facebook</span>
+            <span class="ticker-item">OnlyFans</span>
+            <span class="ticker-item">TikTok</span>
+            <span class="ticker-item">Telegram</span>
+            <span class="ticker-item">Instagram</span>
+            <span class="ticker-item">Facebook</span>
+            <span class="ticker-item">OnlyFans</span>
+            <span class="ticker-item">TikTok</span>
+            <span class="ticker-item">Telegram</span>
+            <span class="ticker-item">Instagram</span>
+            <span class="ticker-item">Facebook</span>
+            <span class="ticker-item">OnlyFans</span>
+            <span class="ticker-item">TikTok</span>
+            <span class="ticker-item">Telegram</span>
+            <span class="ticker-item">Instagram</span>
+            <span class="ticker-item">Facebook</span>
+            <span class="ticker-item">OnlyFans</span>
+            <span class="ticker-item">TikTok</span>
+            <span class="ticker-item">Telegram</span>
         </div>
     </div>
 
@@ -3066,42 +3185,40 @@
                 <div class="t-card">
                     <div class="t-quote">"</div>
                     <div class="stars">★★★★★</div>
-                    <p class="t-text">SM CARTEL transformed my Instagram completely. 15K followers in 3 weeks. Quality
-                        is
-                        unreal and delivery is always instant. Nothing else comes close.</p>
+                    <p class="t-text">SM CARTEL helped me to recover my account with complete security. I am satisfied
+                        with the service.</p>
                     <div class="t-author">
                         <div class="t-avatar">AK</div>
                         <div>
                             <div class="t-name">Ahmad K.</div>
-                            <div class="t-role">Instagram Influencer</div>
+                            <div class="t-role">Happy Customer</div>
                         </div>
                     </div>
                 </div>
                 <div class="t-card">
                     <div class="t-quote">"</div>
                     <div class="stars">★★★★★</div>
-                    <p class="t-text">Best SMM panel I've ever used. The API is flawless and their prices destroyed
-                        every
-                        competitor. My reseller panel revenue has literally tripled since switching.</p>
+                    <p class="t-text">SM CARTEL's verification service is top-notch. They helped me get the verified
+                        badge on both Instagram and Facebook faster than I ever thought possible. Real professionals and
+                        amazing communication.</p>
                     <div class="t-author">
                         <div class="t-avatar">MR</div>
                         <div>
                             <div class="t-name">Maria R.</div>
-                            <div class="t-role">SMM Reseller</div>
+                            <div class="t-role">Happy Customer</div>
                         </div>
                     </div>
                 </div>
                 <div class="t-card">
                     <div class="t-quote">"</div>
                     <div class="stars">★★★★★</div>
-                    <p class="t-text">Growing my Telegram channel was a nightmare before SM Cartel. Now I add thousands
-                        of
-                        real members daily at a price that makes total sense for my business.</p>
+                    <p class="t-text">I lost access to my main business page and tried everything. SM CARTEL stepped in
+                        and successfully recovered my Facebook account in just 48 hours. Absolute lifesavers.</p>
                     <div class="t-author">
                         <div class="t-avatar">DP</div>
                         <div>
                             <div class="t-name">David P.</div>
-                            <div class="t-role">Community Manager</div>
+                            <div class="t-role">Happy Customer</div>
                         </div>
                     </div>
                 </div>
@@ -3119,10 +3236,8 @@
                     <div class="faq-item open">
                         <button class="faq-q" onclick="toggleFaq(this)">What is SM CARTEL? <div class="faq-icon"><i
                                     class="fas fa-plus"></i></div></button>
-                        <div class="faq-a">SM CARTEL is a premium Social Media Marketing (SMM) panel providing
-                            affordable,
-                            fast, and high-quality growth services across Instagram, Facebook, Twitter/X, Telegram,
-                            OnlyFans, and more.</div>
+                        <div class="faq-a">SM CARTEL is a professional social media management team who provide services
+                            across platforms like Instagram, Facebook, Twitter (X), and WhatsApp.</div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-q" onclick="toggleFaq(this)">Is it safe for my accounts? <div
@@ -3146,15 +3261,7 @@
                             other cryptocurrencies. New payment methods are added regularly based on customer demand.
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <button class="faq-q" onclick="toggleFaq(this)">Do you have a reseller API? <div
-                                class="faq-icon"><i class="fas fa-plus"></i></div></button>
-                        <div class="faq-a">Yes! Our REST API lets you integrate all SM CARTEL services into your own
-                            panel.
-                            Full documentation is available after registration. API access is included in Pro and
-                            Enterprise
-                            plans.</div>
-                    </div>
+
                     <div class="faq-item">
                         <button class="faq-q" onclick="toggleFaq(this)">What if my order doesn't complete? <div
                                 class="faq-icon"><i class="fas fa-plus"></i></div></button>
@@ -3170,11 +3277,11 @@
         <!-- CTA -->
         <div class="cta-wrap">
             <div class="cta-box" data-reveal="scale-in">
-                <h2>READY TO TAKE<br><span style="color:var(--red)">CONTROL?</span></h2>
-                <p>Join over 500,000 creators and businesses who use SM CARTEL to dominate social media every single
-                    day.
+                <h2>LET US<br><span style="color:var(--red)">HELP YOU !?</span></h2>
+                <p>Provide us the opportunity to help you and add you into the list of
+                    happy customers.
                 </p>
-                <a href="#" class="btn btn-red btn-lg"><i class="fas fa-rocket"></i> Create Free Account Now</a>
+                <a href="#contact-section" class="btn btn-red btn-lg"><i class="fas fa-envelope"></i> Contact Us</a>
             </div>
         </div>
 
@@ -3185,9 +3292,8 @@
                 <div class="footer-brand">
                     <span style="font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:4px;">SM <em
                             style="color:var(--red);font-style:normal;">CARTEL</em></span>
-                    <p>The world's most powerful SMM panel. Unbeatable prices, instant delivery, and real growth —
-                        across
-                        every platform that matters.</p>
+                    <p>SM CARTEL is a professional social media management team who provide services across platforms
+                        like Instagram, Facebook, Twitter (X), and WhatsApp.</p>
                     <div class="social-row">
                         <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
@@ -3208,12 +3314,6 @@
             </div>
             <div class="footer-btm">
                 <span>© 2025 SM CARTEL. All rights reserved.</span>
-                <div class="pay-icons">
-                    <span class="pay">PAYPAL</span>
-                    <span class="pay">VISA</span>
-                    <span class="pay">BTC</span>
-                    <span class="pay">USDT</span>
-                </div>
             </div>
         </footer>
 
