@@ -6,7 +6,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9MW5MPFKCD"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-9MW5MPFKCD');
     </script>
@@ -388,7 +388,7 @@
             justify-content: center;
             flex-wrap: wrap;
             animation: fadeUp 0.7s ease 0.3s both;
-        } 
+        }
 
         .trust-row {
             margin-top: 50px;
@@ -2933,7 +2933,8 @@
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact-section">Contact</a></li>
         </ul>
-        <a href="#contact-section" class="btn btn-red" style="font-size:0.85rem;padding:8px 20px;" onclick="gtag('event', 'cta_click', {button_name: 'contact_us', button_location: 'navbar'});"><i
+        <a href="#contact-section" class="btn btn-red cta-button" style="font-size:0.85rem;padding:8px 20px;"
+            data-ga-event="cta_click" data-ga-name="contact_us" data-ga-location="navbar"><i
                 class="fas fa-envelope"></i> Contact Us</a>
         <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
             <span></span>
@@ -2964,7 +2965,8 @@
             </h1>
             <p class="hero-p">Experience of 5 years, providing the best service at most genuine price.</p>
             <div class="hero-btns">
-                <a href="#services" class="btn btn-red btn-lg" onclick="gtag('event', 'cta_click', {button_name: 'view_services', button_location: 'hero'});"><i class="fas fa-layer-group"></i> View Services</a>
+                <a href="#services" class="btn btn-red btn-lg cta-button" data-ga-event="cta_click" data-ga-name="view_services"
+                    data-ga-location="hero"><i class="fas fa-layer-group"></i> View Services</a>
             </div>
             <div class="trust-row">
                 <div class="trust-item"><i class="fas fa-shield-alt"></i> 100% Safe</div>
@@ -3027,23 +3029,28 @@
             affordable price.
         </p>
         <div class="services-grid" data-reveal-stagger>
-            <div class="svc-card" onclick="gtag('event', 'cta_click', {button_name: 'instagram', button_location: 'services'}); openServiceModal('ig-modal')" data-tilt>
+            <div class="svc-card cta-button" onclick="openServiceModal('ig-modal')" data-tilt data-ga-event="cta_click"
+                data-ga-name="instagram" data-ga-location="services">
                 <div class="svc-icon ig"><i class="fab fa-instagram"></i></div>
                 <div class="svc-name">Instagram</div>
             </div>
-            <div class="svc-card" onclick="gtag('event', 'cta_click', {button_name: 'facebook', button_location: 'services'}); openServiceModal('fb-modal')" data-tilt>
+            <div class="svc-card cta-button" onclick="openServiceModal('fb-modal')" data-tilt data-ga-event="cta_click"
+                data-ga-name="facebook" data-ga-location="services">
                 <div class="svc-icon fb"><i class="fab fa-facebook-f"></i></div>
                 <div class="svc-name">Facebook</div>
             </div>
-            <div class="svc-card" onclick="gtag('event', 'cta_click', {button_name: 'twitter_x', button_location: 'services'}); openServiceModal('tw-modal')" data-tilt>
+            <div class="svc-card cta-button" onclick="openServiceModal('tw-modal')" data-tilt data-ga-event="cta_click"
+                data-ga-name="twitter_x" data-ga-location="services">
                 <div class="svc-icon tw"><i class="fab fa-twitter"></i></div>
                 <div class="svc-name">Twitter / X</div>
             </div>
-            <div class="svc-card" onclick="gtag('event', 'cta_click', {button_name: 'tiktok', button_location: 'services'}); openServiceModal('tk-modal')" data-tilt>
+            <div class="svc-card cta-button" onclick="openServiceModal('tk-modal')" data-tilt data-ga-event="cta_click"
+                data-ga-name="tiktok" data-ga-location="services">
                 <div class="svc-icon tk"><i class="fab fa-tiktok"></i></div>
                 <div class="svc-name">TikTok</div>
             </div>
-            <div class="svc-card" onclick="gtag('event', 'cta_click', {button_name: 'onlyfans', button_location: 'services'}); openServiceModal('of-modal')" data-tilt>
+            <div class="svc-card cta-button" onclick="openServiceModal('of-modal')" data-tilt data-ga-event="cta_click"
+                data-ga-name="onlyfans" data-ga-location="services">
                 <div class="svc-icon of"><i class="fas fa-fire"></i></div>
                 <div class="svc-name">OnlyFans</div>
             </div>
@@ -3077,7 +3084,8 @@
                     <div class="contact-icon-wrap ci-tg"><i class="fab fa-telegram-plane"></i></div>
                     <div class="contact-name">Telegram</div>
                     <div class="contact-handle">Fastest way to reach us</div>
-                    <a href="https://t.me/mauritsneoz" target="_blank" class="contact-btn btn-tg" onclick="gtag('event', 'cta_click', {button_name: 'open_telegram', button_location: 'contact'});">
+                    <a href="https://t.me/mauritsneoz" target="_blank" class="contact-btn btn-tg cta-button"
+                        data-ga-event="cta_click" data-ga-name="open_telegram" data-ga-location="contact">
                         Open Telegram <i class="fas fa-arrow-right"></i>
                     </a>
                     <div class="contact-response"><i class="fas fa-circle"></i> Usually responds instantly</div>
@@ -3087,7 +3095,8 @@
                     <div class="contact-icon-wrap ci-em"><i class="fas fa-envelope"></i></div>
                     <div class="contact-name">Email</div>
                     <div class="contact-handle">For detailed inquiries</div>
-                    <a href="mailto:asnasdraastro@gmail.com" class="contact-btn btn-em" onclick="gtag('event', 'cta_click', {button_name: 'send_email', button_location: 'contact'});">
+                    <a href="mailto:asnasdraastro@gmail.com" class="contact-btn btn-em cta-button" data-ga-event="cta_click"
+                        data-ga-name="send_email" data-ga-location="contact">
                         Send Email <i class="fas fa-arrow-right"></i>
                     </a>
                     <div class="contact-response"><i class="fas fa-circle"></i> Responds within 1 hour</div>
@@ -3097,7 +3106,8 @@
                     <div class="contact-icon-wrap ci-wa"><i class="fab fa-whatsapp"></i></div>
                     <div class="contact-name">WhatsApp</div>
                     <div class="contact-handle">Quick chat support</div>
-                    <a href="https://wa.me/12268662777" target="_blank" class="contact-btn btn-wa" onclick="gtag('event', 'cta_click', {button_name: 'open_whatsapp', button_location: 'contact'});">
+                    <a href="https://wa.me/12268662777" target="_blank" class="contact-btn btn-wa cta-button"
+                        data-ga-event="cta_click" data-ga-name="open_whatsapp" data-ga-location="contact">
                         Open WhatsApp <i class="fas fa-arrow-right"></i>
                     </a>
                     <div class="contact-response"><i class="fas fa-circle"></i> Usually responds instantly</div>
@@ -3289,7 +3299,9 @@
                 <p>Provide us the opportunity to help you and add you into the list of
                     happy customers.
                 </p>
-                <a href="#contact-section" class="btn btn-red btn-lg" onclick="gtag('event', 'cta_click', {button_name: 'contact_us', button_location: 'cta_section'});"><i class="fas fa-envelope"></i> Contact Us</a>
+                <a href="#contact-section" class="btn btn-red btn-lg cta-button" data-ga-event="cta_click"
+                    data-ga-name="contact_us" data-ga-location="cta_section"><i class="fas fa-envelope"></i> Contact
+                    Us</a>
             </div>
         </div>
 
@@ -3708,6 +3720,74 @@
                         ticking = true;
                     }
                 }, { passive: true });
+            })();
+
+            // ========== GA4 EVENT TRACKING WITH PREVENTDEFAULT & DELAYED REDIRECT ==========
+            (function () {
+                var GA_TIMEOUT = 250; // ms fallback if event_callback never fires
+
+                /**
+                 * Determines whether a link navigates away from the current page.
+                 * Returns false for hash links (#), javascript: hrefs, and empty hrefs.
+                 */
+                function isExternalNavigation(el) {
+                    if (el.tagName !== 'A') return false;
+                    var href = el.getAttribute('href');
+                    if (!href || href === '#' || href.startsWith('#') || href.startsWith('javascript:')) return false;
+                    return true; // http, https, mailto, tel, etc.
+                }
+
+                /**
+                 * Sends a gtag event. For elements that navigate away,
+                 * uses preventDefault + delayed redirect to ensure GA captures the event.
+                 */
+                function handleTrackedClick(e) {
+                    var el = e.currentTarget;
+                    var eventName = el.getAttribute('data-ga-event');
+                    var buttonName = el.getAttribute('data-ga-name') || '';
+                    var buttonLocation = el.getAttribute('data-ga-location') || '';
+
+                    var eventParams = {
+                        button_name: buttonName,
+                        button_location: buttonLocation
+                    };
+
+                    // If this element navigates away, prevent default and redirect after GA fires
+                    if (isExternalNavigation(el)) {
+                        e.preventDefault();
+
+                        var href = el.getAttribute('href');
+                        var target = el.getAttribute('target');
+                        var navigated = false;
+
+                        function doNavigate() {
+                            if (navigated) return;
+                            navigated = true;
+                            if (target === '_blank') {
+                                window.open(href, '_blank');
+                            } else {
+                                window.location.href = href;
+                            }
+                        }
+
+                        // Use event_callback so GA tells us when the event is sent
+                        eventParams.event_callback = doNavigate;
+
+                        // Fallback timeout — never block the user longer than GA_TIMEOUT ms
+                        setTimeout(doNavigate, GA_TIMEOUT);
+                    }
+
+                    // Fire the GA event (works for both navigating and non-navigating elements)
+                    if (typeof gtag === 'function') {
+                        gtag('event', eventName, eventParams);
+                    }
+                }
+
+                // Attach listeners to all elements with data-ga-event attribute
+                var trackedElements = document.querySelectorAll('[data-ga-event]');
+                trackedElements.forEach(function (el) {
+                    el.addEventListener('click', handleTrackedClick);
+                });
             })();
         </script>
 </body>
